@@ -113,7 +113,9 @@ app.get("/alerts/config", async (request, response) => {
     const filteredAlerts = alerts.filter((alert) => {
         return alert.startHour < hour < alert.endHour;
     })
-    response.send(filteredAlerts).status(200);
+    response.send({
+        alerts: filteredAlerts
+    }).status(200);
 });
 
 app.post("/notifications", async (req, res) => {
