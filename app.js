@@ -36,57 +36,75 @@ const alerts = [{
     "id": "1",
     "name": "alert 1",
     "type": "threshold",
-    "rollingWindow": "1",
-    "startHour": "11",
-    "endHour": "23"
+    "rollingWindow": {
+        "time": 1,
+        "unit": hour
+    },
+    "activeHour": {
+        "startHour": "11",
+        "endHour": "23"
+    }
 }, {
     "kpi": "Gross Revenue",
     "thresholdPosition": "below",
     "thresholdValue": "8000",
     "function": "count",
     "filters": [{
-        "id": "0001",
         "name": "beef",
         "type": "category",
-        "operator": 'is/is not',
+        "operator": 'is',
     }],
     "id": "3",
     "name": "alert 3",
     "type": "threshold",
-    "rollingWindow": "1",
-    "startHour": "11",
-    "endHour": "23"
+    "rollingWindow": {
+        "time": 1,
+        "unit": hour
+    },
+    "activeHour": {
+        "startHour": "11",
+        "endHour": "23"
+    },
+    "dataRange": ["2023-09-01", "2023-10-01"]
 }, {
     "kpi": "Gross Revenue",
     "thresholdPosition": "above",
     "thresholdValue": "2000",
     "function": "count",
     "filters": [{
-        "id": "0001",
         "name": "beef",
         "type": "category",
-        "operator": 'is/is not',
+        "operator": 'is not',
     }],
     "id": "3",
-    "name": "alert 3",
+    "name": "alert 4",
     "type": "threshold",
-    "rollingWindow": "1",
+    "rollingWindow": {
+        "time": 1,
+        "unit": hour
+    },
     "startHour": "11",
-    "endHour": "23"
+    "endHour": "23",
+    "dataRange": ["2023-09-02", "2023-10-31"]
 }, {
     "kpi": "Gross Revenue",
-    "thresholdAbsenseTime": "1hr",
+    "rollingWindow": {
+        "time": 1,
+        "unit": hour
+    },
     "filters": [{
-        "id": "0001",
         "name": "beef",
         "type": "category",
-        "operator": 'is/is not',
+        "operator": 'is',
     }],
     "id": "02",
     "name": "alert 102",
     "type": "absense",
-    "startHour": "12",
-    "endHour": "20"
+    "activeHour": {
+        "startHour": "11",
+        "endHour": "23"
+    },
+    "dataRange": ["2023-09-02", "2023-10-31"]
 }]
 
 const notifications = [{
