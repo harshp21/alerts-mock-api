@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 //     }
 // }
 
-const alerts =  [{
+const alerts =   [{
     "kpi": "Gross Revenue",
     "trigger": {
         "thresholdPosition": "above",
@@ -44,8 +44,10 @@ const alerts =  [{
     "activeHour": {
         "startHour": "11",
         "endHour": "23"
-    }
-}, {
+    },
+    "dataRange": ["2023-09-01", "2023-10-01"]
+}, 
+{
     "kpi": "Gross Revenue",
      "trigger": {
         "thresholdPosition": "above",
@@ -88,8 +90,10 @@ const alerts =  [{
         "time": 1,
         "unit": "hour"
     },
-    "startHour": "11",
-    "endHour": "23",
+    "activeHour": {
+        "startHour": "11",
+        "endHour": "23"
+    },
     "dataRange": ["2023-09-02", "2023-10-31"]
 }, {
     "kpi": "Gross Revenue",
