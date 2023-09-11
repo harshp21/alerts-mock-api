@@ -24,8 +24,10 @@ const PORT = process.env.PORT || 3000;
 
 const alerts = [{
     "kpi": "Gross Revenue",
-    "thresholdPosition": "above",
-    "thresholdValue": "3000",
+    "trigger": {
+        "thresholdPosition": "above",
+        "thresholdValue": "3000"
+    },
     "function": "count",
     "filters": [{
         "id": "0001",
@@ -46,8 +48,10 @@ const alerts = [{
     }
 }, {
     "kpi": "Gross Revenue",
-    "thresholdPosition": "below",
-    "thresholdValue": "8000",
+     "trigger": {
+        "thresholdPosition": "above",
+        "thresholdValue": "3000"
+    },
     "function": "count",
     "filters": [{
         "name": "beef",
@@ -68,8 +72,10 @@ const alerts = [{
     "dataRange": ["2023-09-01", "2023-10-01"]
 }, {
     "kpi": "Gross Revenue",
-    "thresholdPosition": "above",
-    "thresholdValue": "2000",
+     "trigger": {
+        "thresholdPosition": "above",
+        "thresholdValue": "3000"
+    },
     "function": "count",
     "filters": [{
         "name": "beef",
@@ -88,10 +94,10 @@ const alerts = [{
     "dataRange": ["2023-09-02", "2023-10-31"]
 }, {
     "kpi": "Gross Revenue",
-    "rollingWindow": {
-        "time": 1,
-        "unit": hour
-    },
+     "trigger": {
+        "thresholdAbsenseValue": "above",
+        "absenseUnit": "3000"
+    }
     "filters": [{
         "name": "beef",
         "type": "category",
