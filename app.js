@@ -45,7 +45,10 @@ const alerts =   [{
         "startHour": "11",
         "endHour": "23"
     },
-    "dataRange": ["2023-09-01", "2023-10-01"]
+    "dateRange": {
+        "startDate": "2023-09-02", 
+        "endDate": "2023-12-31"
+    }
 }, 
 {
     "kpi": "Gross Revenue",
@@ -70,7 +73,10 @@ const alerts =   [{
         "startHour": "11",
         "endHour": "23"
     },
-    "dataRange": ["2023-09-01", "2023-10-01"]
+    "dateRange": {
+        "startDate": "2023-09-02", 
+        "endDate": "2023-11-31"
+    }
 }, {
     "kpi": "Gross Revenue",
      "trigger": {
@@ -94,12 +100,15 @@ const alerts =   [{
         "startHour": "11",
         "endHour": "23"
     },
-    "dataRange": ["2023-09-02", "2023-10-31"]
+    "dateRange": {
+        "startDate": "2023-09-12", 
+        "endDate": "2023-10-02"
+    }
 }, {
     "kpi": "Gross Revenue",
-     "trigger": {
-        "thresholdAbsenseValue": "above",
-        "absenseUnit": "3000"
+    "rollingWindow": {
+        "time": 1,
+        "unit": "hour"
     },
     "filters": [{
         "name": "beef",
@@ -108,12 +117,15 @@ const alerts =   [{
     }],
     "id": "02",
     "name": "alert 102",
-    "type": "absense",
+    "type": "absence",
     "activeHour": {
         "startHour": "11",
         "endHour": "23"
     },
-    "dataRange": ["2023-09-02", "2023-10-31"]
+    "dateRange": {
+        "startDate": "2023-09-02", 
+        "endDate": "2023-10-31"
+    }
 }];
 
 const notifications = [{
