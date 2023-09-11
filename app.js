@@ -141,7 +141,7 @@ app.get("/alerts/config", async (request, response) => {
         return alert.startHour < hour < alert.endHour;
     })
     response.send({
-        alerts: filteredAlerts
+        alerts
     }).status(200);
 });
 
