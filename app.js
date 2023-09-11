@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 //     }
 // }
 
-const alerts = [{
+const alerts =  [{
     "kpi": "Gross Revenue",
     "trigger": {
         "thresholdPosition": "above",
@@ -30,17 +30,16 @@ const alerts = [{
     },
     "function": "count",
     "filters": [{
-        "id": "0001",
         "name": "beef",
         "type": "category",
-        "operator": 'is/is not',
+        "operator": "is"
     }],
     "id": "1",
     "name": "alert 1",
     "type": "threshold",
     "rollingWindow": {
         "time": 1,
-        "unit": hour
+        "unit": "hour"
     },
     "activeHour": {
         "startHour": "11",
@@ -56,14 +55,14 @@ const alerts = [{
     "filters": [{
         "name": "beef",
         "type": "category",
-        "operator": 'is',
+        "operator": "is"
     }],
     "id": "3",
     "name": "alert 3",
     "type": "threshold",
     "rollingWindow": {
         "time": 1,
-        "unit": hour
+        "unit": "hour"
     },
     "activeHour": {
         "startHour": "11",
@@ -80,14 +79,14 @@ const alerts = [{
     "filters": [{
         "name": "beef",
         "type": "category",
-        "operator": 'is not',
+        "operator": "is not"
     }],
     "id": "3",
     "name": "alert 4",
     "type": "threshold",
     "rollingWindow": {
         "time": 1,
-        "unit": hour
+        "unit": "hour"
     },
     "startHour": "11",
     "endHour": "23",
@@ -97,11 +96,11 @@ const alerts = [{
      "trigger": {
         "thresholdAbsenseValue": "above",
         "absenseUnit": "3000"
-    }
+    },
     "filters": [{
         "name": "beef",
         "type": "category",
-        "operator": 'is',
+        "operator": "is"
     }],
     "id": "02",
     "name": "alert 102",
@@ -111,7 +110,7 @@ const alerts = [{
         "endHour": "23"
     },
     "dataRange": ["2023-09-02", "2023-10-31"]
-}]
+}];
 
 const notifications = [{
     alertId: "alert id",
